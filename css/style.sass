@@ -1,0 +1,590 @@
+@import 'sass/mixins.sass'
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&subset=cyrillic')
+
+$textColor: #333
+$orange: #e06618
+
+.fb-row
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(space-between)
+	+align-items(center)
+
+.fb-row-center
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(center)
+	+align-items(center)
+
+.fb-row-top
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(space-between)
+	+align-items(flex-start)
+
+.fb-row-start
+	+flexbox()
+	+flex-flow(row wrap)
+	+justify-content(flex-start)
+	+align-items(flex-start)
+
+.clearfix:after 
+	content: ''
+	display: block
+	clear: both 
+	height: 0
+	visibility: hidden
+
+//
+
+body 
+	line-height: 1.4
+	font-family: 'Roboto'
+
+h2
+	color: $textColor
+	font-size: 34px
+	margin: 0 auto 40px
+	text-align: center
+	font-weight: 600
+
+.ns-wrap 
+	width: 100%
+	max-width: 1300px
+	padding: 0 20px
+	margin: 0 auto
+	
+
+.ns-pluses
+	padding: 120px 0 
+	background: url(../img/pluses-bg.jpg) center no-repeat
+	background-size: cover
+
+.ns-pluses__item
+	width: 240px
+	margin: 0 10px 20px
+	text-align: center
+
+	img
+		display: inline-block
+		margin-bottom: 20px
+
+	h5
+		color: $orange
+		text-transform: uppercase
+		margin: 0 0 10px
+		font-size: 20px
+
+	p 
+		color: $textColor
+		margin: 0
+
+
+
+.ns-video-complex 
+	padding-bottom: 60px
+	position: relative
+	height: 500px
+
+	.ns-complex-iframe
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+
+	h2
+		color: #fff
+		position: relative
+		padding-top: 300px
+
+
+
+.ns-you-need 
+	padding-top: 100px
+	padding-bottom: 50px
+
+
+.you-need__item--left
+	margin: 0 20px 30px 0
+	p, img
+		display: inline-block
+		vertical-align: middle
+
+	p 
+		font-weight: 300
+		color: $textColor
+		max-width: 460px
+		width: 100%
+		text-align: right
+		margin-right: 20px
+
+
+.you-need__item--right
+	margin: 0 0px 30px 20px
+	p, img
+		display: inline-block
+		vertical-align: middle
+
+	p 
+		font-weight: 300
+		color: $textColor
+		max-width: 460px
+		width: 100%
+		text-align: left
+		margin-left: 20px
+
+
+
+.ns-order
+	background: #ededed
+	padding: 100px 0
+
+	h2
+		padding-bottom: 30px
+		border-bottom: 1px solid #cccbca
+
+	&__item
+		width: 300px
+		text-align: center
+		margin: 0 20px 30px
+
+		img
+			display: inline-block
+
+
+.ns-why-trust
+	min-height: 500px
+	background: url(../img/trust-bg.jpg) center no-repeat
+	background-size: cover
+	padding: 1px 0 20px
+
+	h2
+		padding-top: 70px
+		color: $orange
+
+.ns-trust-container
+	&--left 
+		position: relative
+		width: 100%
+		max-width: 340px
+		float: left
+	
+	&--right
+		position: relative
+		width: 100%
+		max-width: 340px
+		float: right
+
+		
+
+.ns-trust__item--left
+	position: relative
+	padding: 1px 0 1px 35px
+	margin-bottom: 50px
+	height: 150px
+	+flexbox()
+	+flex-flow(column nowrap)
+	+justify-content(center)
+	+align-items(center)
+
+	&:after
+		position: absolute
+		content: ''
+		width: 150px
+		height: 150px
+		border: 1px solid $orange
+		border-right: none
+		left: 0
+		top: 0
+
+	span
+		position: absolute
+		z-index: 5
+		left: -12px
+		top: 60px
+		border-radius: 100%
+		width: 25px
+		height: 25px
+		line-height: 25px
+		background: $orange
+		text-align: center
+		color: #fff
+		font-weight: 900
+		font-size: 14px 
+
+	p 
+		margin: 0
+		color: #333
+
+.ns-trust__item--right
+	position: relative
+	padding: 1px 35px 1px 0px
+	margin-bottom: 50px
+	height: 150px
+	+flexbox()
+	+flex-flow(column nowrap)
+	+justify-content(center)
+	+align-items(center)
+
+	&:after
+		position: absolute
+		content: ''
+		width: 150px
+		height: 150px
+		border: 1px solid $orange
+		border-left: none
+		right: 0
+		top: 0
+
+	span
+		position: absolute
+		z-index: 5
+		right: -12px
+		top: 60px
+		border-radius: 100%
+		width: 25px
+		height: 25px
+		line-height: 25px
+		background: $orange
+		text-align: center
+		color: #fff
+		font-weight: 900
+		font-size: 14px 
+
+	p 
+		margin: 0
+		text-align: right
+		color: #333
+
+
+.ns-warranty
+	padding: 100px 0 50px
+	min-height: 500px
+	background: url(../img/warranty-bg.jpg) center no-repeat
+	background-size: cover
+
+	.ns-warranty-wrap
+		width: 100%
+		max-width: 1160px
+		padding: 0 20px 
+		margin: 0 auto
+
+	h2
+		color: #fff
+		margin-bottom: 50px
+
+	p 
+		padding-left: 50px
+		color: #fff
+		font-size: 18px
+		margin: 0 0 20px
+		font-weight: 400
+
+
+
+.ns-how-work
+	padding-top: 100px
+	padding-bottom: 50px
+
+.ns-work__item
+	width: 25%
+	margin: 0 0 25px
+	text-align: center
+
+	span 
+		display: inline-block
+		width: 80px
+		height: 80px
+		line-height: 80px
+		font-size: 34px
+		border-radius: 100%
+		color: $orange
+		border: 2px solid #eee
+
+	p 
+		font-weight: 300
+		font-size: 15px
+		padding: 0 10px
+
+.ns-how-work__button 
+	background: $orange
+	border-radius: 4px 
+	width: 260px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	text-transform: uppercase
+	color: #fff
+	cursor: pointer
+	margin: 0 auto
+	font-size: 18px
+
+.slick-prev
+	left: 0px
+
+.slick-next
+	right: 0px
+
+.slick-prev:before, .slick-next:before
+	content: ''
+	background: url(../img/slider-arr.png) center no-repeat
+	width: 20px
+	height: 32px
+	display: block
+
+.slick-next:before
+	transform: rotate(180deg)
+
+.ns-clients
+	background: #ededed
+	padding-top: 80px
+	padding-bottom: 70px
+
+.ns-clients-slider
+	max-width: 1200px
+	width: 100%
+	padding: 0 50px
+	margin: 0 auto
+
+.ns-clients-slider__item
+	display: block
+	text-align: center
+	width: auto
+	height: 65px
+
+	img
+		display: inline-block
+
+.ns-comments
+	padding-top: 80px
+	padding-bottom: 60px
+
+	h2
+		text-align: center
+
+.ns-comments-slider
+	width: 100%
+	padding: 0 50px
+
+.ns-comments__item
+	outline: none
+	padding: 0 20px
+
+	img
+		display: block
+		margin: 0 auto 20px
+
+	h6 
+		text-align: center
+		padding-bottom: 12px
+		margin: 0 0 15px
+		font-size: 16px
+		border-bottom: 1px solid #d9d7d7
+
+	p 
+		font-size: 14px
+		color: #808080
+		margin: 0
+	
+.ns-examples
+	background: #ededed
+	padding-top: 80px
+	padding-bottom: 80px
+
+.ns-examples-slider
+	padding: 0 50px
+	img 
+		display: block
+		height: auto
+		margin: 0 15px 20px
+		box-shadow: 0 5px 15px 0 rgba(0,0,0, .2)
+		outline: none
+
+
+
+.ns-footer
+	padding-top: 70px
+	padding-bottom: 70px
+
+	h2
+		margin-bottom: 30px
+
+.fb-row-center
+	+align-items(flex-start)
+
+	iframe 
+		margin: 0 25px 20px 0
+
+	.ns-footer-info
+		width: 100%
+		max-width: 400px
+		margin: 0 15px 20px
+
+		p 
+			font-size: 18px
+			color: #808080
+
+			span 
+				color: #333
+
+.ns-footer-button
+	width: 260px
+	height: 50px
+	margin-top: 40px
+	margin-bottom: 40px
+	line-height: 50px
+	text-transform: uppercase
+	border-radius: 4px
+	text-align: center
+	color: #fff
+	background: $orange
+	cursor: pointer
+
+.ns-footer-soc
+	a 
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+
+
+@media only screen and (max-width : 1100px) 
+	.ns-pluses
+		padding: 50px 0
+
+		.fb-row-top
+			+justify-content(center)
+
+	.ns-pluses__item
+		margin: 0 10px 40px 
+		width: 50%
+		max-width: 300px
+
+	.ns-you-need
+		padding: 50px 0
+
+	.ns-order
+		padding: 50px 0
+
+	.ns-examples
+		padding: 50px 0
+
+	.ns-footer
+		padding: 50px 0
+
+	.fb-row-center iframe
+		width: 50%
+		display: block
+
+	.ns-footer-info
+		display: block
+		width: 50%
+
+@media only screen and (max-width : 1000px) 
+	h2
+		font-size: 26px
+
+	.ns-why-trust
+		background: none
+
+	.ns-work__item p
+		font-size: 14px
+
+	.ns-footer h2
+		font-size: 22px
+
+	.fb-row-center iframe
+		margin: 0 0 50px
+
+	.fb-row-center .ns-footer-info
+		margin: 0
+		padding-left: 30px
+
+		p 
+			font-size: 16px
+
+@media only screen and (max-width : 900px) 
+
+@media only screen and (max-width : 800px) 
+	.ns-pluses__item
+		max-width: 240px
+
+	.ns-trust-container--left,
+	.ns-trust-container--right
+		float: none
+		margin: 0 auto 30px
+		font-size: 15px
+
+	.fb-row-center iframe
+		width: 100%
+		max-width: 600px
+
+	.ns-footer-button
+		margin: 30px auto
+
+	.ns-footer-soc
+		text-align: center
+
+
+@media only screen and (max-width : 700px) 
+	.you-need__item--left,
+	.you-need__item--right
+		+flexbox()
+		+flex-flow(column nowrap)
+		+justify-content(center)
+		+align-items(center)
+		margin: 0 auto 30px
+
+		p 
+			order: 1
+			text-align: center
+
+		img
+			order: 0
+
+	.ns-work__item
+		width: 50%
+		padding: 0 15px
+
+	.ns-footer h2
+		font-size: 20px
+
+@media only screen and (max-width : 600px) 
+	h2 
+		font-weight: 400px
+
+	.ns-pluses__item
+		width: 100%
+		max-width: 100%
+
+	.ns-footer h2
+		font-size: 18px
+
+	.ns-video-complex h2
+		font-size: 22px
+
+@media only screen and (max-width : 500px) 
+	.ns-warranty h2
+		font-size: 22px
+
+	.ns-warranty p
+		font-size: 16px
+		padding-left: 30px
+
+	.ns-comments-slider
+		padding: 0 30px
+
+	.ns-examples-slider
+		padding: 0 30px
+
+	.fb-row-center .ns-footer-info
+		padding-left: 0
+
+@media only screen and (max-width : 400px) 
+	.ns-work__item
+		width: 100%
+		padding: 0 15px
+
+	.fb-row-center .ns-footer-info p
+		font-size: 14px
