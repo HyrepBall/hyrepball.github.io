@@ -105,33 +105,51 @@ h2
 	padding-top: 100px
 	padding-bottom: 50px
 
+	.fb-row-center
+		+flex-flow(row nowrap)
 
 .you-need__item--left
 	margin: 0 20px 30px 0
+	width: 50%
+	font-size: 0
+
 	p, img
 		display: inline-block
 		vertical-align: middle
 
+	img
+		width: 115px
+	
 	p 
+		width: calc( 100% - 115px - 20px )
+		max-width: 300px
 		font-weight: 300
 		color: $textColor
+		font-size: 15px
 		max-width: 460px
-		width: 100%
 		text-align: right
 		margin-right: 20px
 
 
 .you-need__item--right
 	margin: 0 0px 30px 20px
+	width: 50%
+	font-size: 0
+
 	p, img
 		display: inline-block
 		vertical-align: middle
 
+	img
+		width: 115px
+	
 	p 
+		width: calc( 100% - 115px - 20px )
+		font-size: 15px
+		max-width: 300px
 		font-weight: 300
 		color: $textColor
 		max-width: 460px
-		width: 100%
 		text-align: left
 		margin-left: 20px
 
@@ -563,6 +581,16 @@ h2
 
 	.ns-video-complex h2
 		font-size: 22px
+
+	.you-need__item--left, .you-need__item--right
+		width: 100%
+
+	.ns-you-need .fb-row-center
+		+flex-flow(row wrap)
+
+	.you-need__item--left p, .you-need__item--right p
+		width: 100%
+		margin: 20px auto 30px
 
 @media only screen and (max-width : 500px) 
 	.ns-warranty h2
